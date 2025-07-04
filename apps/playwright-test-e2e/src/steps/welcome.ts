@@ -19,7 +19,7 @@ After(async function () {
 })
 
 Given('user is on the main page', async function () {
-  await page.goto('http://localhost:4200');
+  await page.goto(process.env['BASE_URL'] as string);
 });
 
 Then('title should be {string}', async function (string) {
